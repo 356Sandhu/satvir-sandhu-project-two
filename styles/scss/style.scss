@@ -1,0 +1,186 @@
+@import "setup";
+@import "home";
+
+//  Canary      #FDFA69
+//  Sea Green   #4CEEA7
+//  Black       #2C2C2C
+//  White       #FAFAFA
+//  Ice         #EFFDF3
+
+body {
+  color: #2c2c2c;
+  background: #effdf3;
+}
+
+.wrapper {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+nav a {
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: "Playfair Display", sans-serif;
+}
+
+h3,
+h4 {
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 8.625rem;
+
+  text-align: center;
+}
+
+h2 {
+  font-size: 5rem;
+  line-height: 5.75rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+a button {
+  padding: 1rem 2rem;
+  background-color: #4ceea7;
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.current {
+  border-bottom: 3px solid #4ceea7;
+}
+
+header nav {
+  width: 100%;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  li {
+    margin: 2rem 1rem;
+  }
+
+  a {
+    padding: 0.15rem;
+  }
+}
+
+.articles {
+  article {
+    display: flex;
+    justify-content: space-between;
+
+    .yellow,
+    .text {
+      width: 45%;
+    }
+
+    .yellow,
+    .image-container {
+      position: relative;
+    }
+
+    .yellow {
+      background-color: #fdfa69;
+    }
+
+    .img-container,
+    img {
+      width: 100%;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    p,
+    a {
+      margin-top: 1.5rem;
+    }
+
+    button {
+      border: none;
+    }
+  }
+
+  article:nth-of-type(even) {
+    .yellow {
+      margin-right: 2rem;
+    }
+
+    margin-top: 5rem;
+    flex-direction: row-reverse;
+
+    .text {
+      h3,
+      a {
+        text-align: right;
+      }
+
+      p,
+      h3 {
+        margin-left: calc((100vw - 1400px) / 2);
+      }
+    }
+
+    .image-container {
+      position: relative;
+      left: 2rem;
+      bottom: 2rem;
+    }
+  }
+
+  article:nth-of-type(odd) {
+    .yellow {
+      margin-left: 2rem;
+    }
+
+    .text p,
+    .text h3 {
+      margin-right: calc((100vw - 1400px) / 2);
+    }
+
+    .image-container {
+      position: relative;
+      right: 2rem;
+      bottom: 2rem;
+    }
+  }
+}
+
+footer {
+  background: black;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0.75rem 0;
+}
