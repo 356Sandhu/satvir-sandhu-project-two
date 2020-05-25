@@ -463,7 +463,6 @@ header img {
 }
 
 .featured .grid h4 {
-  text-transform: uppercase;
   margin: 0.5rem 0;
 }
 
@@ -549,6 +548,7 @@ h3,
 h4,
 a {
   font-family: "Playfair Display", sans-serif;
+  text-transform: uppercase;
 }
 
 h3,
