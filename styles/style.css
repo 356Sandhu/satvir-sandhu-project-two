@@ -419,8 +419,107 @@ header img {
   width: 80%;
 }
 
-.featured {
-  height: 100vh;
+.featured .grid .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.featured .grid .grid-item {
+  padding: 2rem 0;
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.featured .grid .icon {
+  margin-right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: #4ceea7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.featured .grid i {
+  font-size: 2rem;
+}
+
+.featured .grid h4 {
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+.featured .grid p {
+  margin-top: 1rem;
+}
+
+.featured .banner {
+  background-image: url("../../Assets/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+}
+
+.featured .profile {
+  padding: 5rem 0;
+}
+
+.featured .profile .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.featured .profile .yellow {
+  margin: 2.5rem;
+  position: relative;
+  background-color: #fdfa69;
+}
+
+.featured .profile .image-container {
+  position: relative;
+  right: 2.5rem;
+  bottom: 2.5rem;
+}
+
+.featured .profile .text {
+  margin-left: calc((400px - 304px) + (200px / 2) - 5rem);
+}
+
+.featured .image-gallery {
+  padding: 0 0 5rem 0;
+}
+
+.featured .image-gallery .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.featured .image-gallery img {
+  width: 100%;
 }
 
 body {
@@ -431,6 +530,10 @@ body {
 .wrapper {
   width: 1400px;
   margin: 0 auto;
+}
+
+button {
+  border: none;
 }
 
 nav a {
@@ -464,6 +567,10 @@ h2 {
 }
 
 h3 {
+  font-size: 2rem;
+}
+
+h4 {
   font-size: 2rem;
 }
 
@@ -556,10 +663,6 @@ header nav a {
 .articles article p,
 .articles article a {
   margin-top: 1.5rem;
-}
-
-.articles article button {
-  border: none;
 }
 
 .articles article:nth-of-type(even) {
