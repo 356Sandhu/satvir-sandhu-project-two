@@ -338,14 +338,55 @@ textarea {
   overflow: hidden;
 }
 
+:root {
+  --content-width: 1400px;
+}
+
+@media only screen and (max-width: 1439px) {
+  :root {
+    --content-width: 1280px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  :root {
+    --content-width: 1100px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  :root {
+    --content-width: 900px;
+  }
+}
+
+:root {
+  --content-width: 1400px;
+}
+
+@media only screen and (max-width: 1439px) {
+  :root {
+    --content-width: 1280px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  :root {
+    --content-width: 1100px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  :root {
+    --content-width: 900px;
+  }
+}
+
 header {
   background-image: url("/Assets/header-image.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-header {
   position: relative;
   height: 85vh;
 }
@@ -411,12 +452,106 @@ header img {
           flex-direction: column;
 }
 
-.what h2 {
-  line-height: initial;
+.what p {
+  margin-top: 2rem;
+  width: 80%;
 }
 
-.what p {
-  width: 80%;
+.what a {
+  margin-top: 2rem;
+}
+
+.articles article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.articles article .yellow,
+.articles article .text {
+  width: 45%;
+}
+
+.articles article .yellow,
+.articles article .image-container {
+  position: relative;
+}
+
+.articles article .yellow {
+  background-color: #fdfa69;
+}
+
+.articles article .img-container,
+.articles article img {
+  width: 100%;
+}
+
+.articles article .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.articles article p,
+.articles article a {
+  margin-top: 1.5rem;
+}
+
+.articles article:nth-of-type(even) {
+  margin-top: 5rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.articles article:nth-of-type(even) .yellow {
+  margin-right: 2rem;
+}
+
+.articles article:nth-of-type(even) .text h3,
+.articles article:nth-of-type(even) .text a {
+  text-align: right;
+}
+
+.articles article:nth-of-type(even) .text p,
+.articles article:nth-of-type(even) .text h3 {
+  margin-left: calc((100vw - var(--content-width)) / 2);
+}
+
+.articles article:nth-of-type(even) .image-container {
+  position: relative;
+  left: 2rem;
+  bottom: 2rem;
+}
+
+.articles article:nth-of-type(odd) .yellow {
+  margin-left: 2rem;
+}
+
+.articles article:nth-of-type(odd) .text p,
+.articles article:nth-of-type(odd) .text h3 {
+  margin-right: calc((100vw - var(--content-width)) / 2);
+}
+
+.articles article:nth-of-type(odd) .image-container {
+  position: relative;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.featured .grid {
+  margin: 5rem 0;
 }
 
 .featured .grid .wrapper {
@@ -431,7 +566,7 @@ header img {
 
 .featured .grid .grid-item {
   padding: 2rem 0;
-  width: 45%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,6 +639,14 @@ header img {
   margin-left: calc((400px - 304px) + (200px / 2) - 5rem);
 }
 
+.featured .profile p {
+  margin-top: 1.25rem;
+}
+
+.featured .profile button {
+  margin-top: 3rem;
+}
+
 .featured .image-gallery {
   padding: 0 0 5rem 0;
 }
@@ -517,8 +660,18 @@ header img {
           justify-content: space-between;
 }
 
-.featured .image-gallery img {
+footer {
+  background: black;
   width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0.75rem 0;
+}
+
+@media only screen and (max-width: 1399px) {
+  .wrapper {
+    width: var(--content-width);
+  }
 }
 
 body {
@@ -527,7 +680,7 @@ body {
 }
 
 .wrapper {
-  width: 1400px;
+  width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -546,7 +699,8 @@ h1,
 h2,
 h3,
 h4,
-a {
+a,
+button {
   font-family: "Playfair Display", sans-serif;
   text-transform: uppercase;
 }
@@ -567,7 +721,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.65rem;
 }
 
 h4 {
@@ -617,101 +771,4 @@ header nav li {
 
 header nav a {
   padding: 0.15rem;
-}
-
-.articles article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.articles article .yellow,
-.articles article .text {
-  width: 45%;
-}
-
-.articles article .yellow,
-.articles article .image-container {
-  position: relative;
-}
-
-.articles article .yellow {
-  background-color: #fdfa69;
-}
-
-.articles article .img-container,
-.articles article img {
-  width: 100%;
-}
-
-.articles article .text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.articles article p,
-.articles article a {
-  margin-top: 1.5rem;
-}
-
-.articles article:nth-of-type(even) {
-  margin-top: 5rem;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.articles article:nth-of-type(even) .yellow {
-  margin-right: 2rem;
-}
-
-.articles article:nth-of-type(even) .text h3,
-.articles article:nth-of-type(even) .text a {
-  text-align: right;
-}
-
-.articles article:nth-of-type(even) .text p,
-.articles article:nth-of-type(even) .text h3 {
-  margin-left: calc((100vw - 1400px) / 2);
-}
-
-.articles article:nth-of-type(even) .image-container {
-  position: relative;
-  left: 2rem;
-  bottom: 2rem;
-}
-
-.articles article:nth-of-type(odd) .yellow {
-  margin-left: 2rem;
-}
-
-.articles article:nth-of-type(odd) .text p,
-.articles article:nth-of-type(odd) .text h3 {
-  margin-right: calc((100vw - 1400px) / 2);
-}
-
-.articles article:nth-of-type(odd) .image-container {
-  position: relative;
-  right: 2rem;
-  bottom: 2rem;
-}
-
-footer {
-  background: black;
-  width: 100%;
-  color: white;
-  text-align: center;
-  padding: 0.75rem 0;
 }

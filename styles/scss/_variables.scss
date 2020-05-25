@@ -1,0 +1,29 @@
+// Colors
+$canary: #fdfa69;
+$sea-green: #4ceea7;
+$black: #fafafa;
+$white: #fafafa;
+$ice: #effdf3;
+
+// Sizing
+:root {
+  --content-width: 1400px;
+}
+
+@media only screen and (max-width: 1439px) {
+  :root {
+    --content-width: 1280px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  :root {
+    --content-width: 1100px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  :root {
+    --content-width: 900px;
+  }
+}

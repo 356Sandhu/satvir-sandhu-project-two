@@ -1,5 +1,7 @@
 @import "setup";
+@import "variables";
 @import "home";
+@import "blog";
 
 //  Canary      #FDFA69
 //  Sea Green   #4CEEA7
@@ -13,7 +15,7 @@ body {
 }
 
 .wrapper {
-  width: 1400px;
+  width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -32,7 +34,8 @@ h1,
 h2,
 h3,
 h4,
-a {
+a,
+button {
   font-family: "Playfair Display", sans-serif;
   text-transform: uppercase;
 }
@@ -54,7 +57,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.65rem;
 }
 
 h4 {
@@ -99,93 +102,4 @@ header nav {
   a {
     padding: 0.15rem;
   }
-}
-
-.articles {
-  article {
-    display: flex;
-    justify-content: space-between;
-
-    .yellow,
-    .text {
-      width: 45%;
-    }
-
-    .yellow,
-    .image-container {
-      position: relative;
-    }
-
-    .yellow {
-      background-color: #fdfa69;
-    }
-
-    .img-container,
-    img {
-      width: 100%;
-    }
-
-    .text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    p,
-    a {
-      margin-top: 1.5rem;
-    }
-  }
-
-  article:nth-of-type(even) {
-    .yellow {
-      margin-right: 2rem;
-    }
-
-    margin-top: 5rem;
-    flex-direction: row-reverse;
-
-    .text {
-      h3,
-      a {
-        text-align: right;
-      }
-
-      p,
-      h3 {
-        margin-left: calc((100vw - 1400px) / 2);
-      }
-    }
-
-    .image-container {
-      position: relative;
-      left: 2rem;
-      bottom: 2rem;
-    }
-  }
-
-  article:nth-of-type(odd) {
-    .yellow {
-      margin-left: 2rem;
-    }
-
-    .text p,
-    .text h3 {
-      margin-right: calc((100vw - 1400px) / 2);
-    }
-
-    .image-container {
-      position: relative;
-      right: 2rem;
-      bottom: 2rem;
-    }
-  }
-}
-
-footer {
-  background: black;
-  width: 100%;
-  color: white;
-  text-align: center;
-  padding: 0.75rem 0;
 }
