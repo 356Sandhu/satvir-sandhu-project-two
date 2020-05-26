@@ -88,6 +88,18 @@ a button {
   border-bottom: 3px solid #4ceea7;
 }
 
+.image-container {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.yellow {
+  background-color: $canary;
+}
+
 header nav {
   width: 100%;
   ul {
@@ -102,4 +114,12 @@ header nav {
   a {
     padding: 0.15rem;
   }
+}
+
+footer {
+  background: black;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0.75rem 0;
 }
