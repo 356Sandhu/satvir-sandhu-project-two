@@ -146,8 +146,6 @@
 }
 
 .index .featured {
-  // height: 100vh;
-
   .grid {
     margin: 5rem 0;
     .wrapper {
@@ -206,6 +204,7 @@
       margin: 2.5rem;
       position: relative;
       background-color: #fdfa69;
+      height: fit-content;
     }
 
     .image-container {
@@ -242,11 +241,5 @@
 
   .image-container {
     max-width: 400px;
-  }
-}
-
-@media only screen and (max-width: 1399px) {
-  .wrapper {
-    width: var(--content-width);
   }
 }
