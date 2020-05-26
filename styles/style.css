@@ -630,9 +630,14 @@ textarea {
 }
 
 .index .featured .profile .image-container {
+  width: auto;
   position: relative;
   right: 2.5rem;
   bottom: 2.5rem;
+}
+
+.index .featured .profile img {
+  width: auto;
 }
 
 .index .featured .profile .text {
@@ -658,6 +663,10 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.index .featured .image-container {
+  max-width: 400px;
 }
 
 @media only screen and (max-width: 1399px) {
@@ -776,8 +785,196 @@ textarea {
   margin: 2rem 0 1rem 0;
 }
 
+.blog main .comment {
+  margin: 4rem 0;
+  margin-right: calc((100vw - var(--content-width)) / 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blog main .comment .image-container {
+  width: 10%;
+  display: inline-block;
+}
+
+.blog main .comment .image-container img {
+  width: 100%;
+}
+
+.blog main .comment .text-comment {
+  width: 80%;
+}
+
+.blog main .comment .date {
+  margin-bottom: 1rem;
+}
+
+.blog main .comments {
+  margin-top: 2.5rem;
+}
+
+.blog main .comments h4 {
+  margin-left: 2rem;
+}
+
+.blog main .comment-form {
+  margin-left: 2rem;
+  margin-right: calc((100vw - var(--content-width)) / 2);
+}
+
+.blog main .comment-form input,
+.blog main .comment-form textarea {
+  padding: 1rem;
+}
+
+.blog main .comment-form .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog main .comment-form input {
+  border: none;
+  border-bottom: 1px solid #4ceea7;
+  width: 45%;
+  margin: 1rem 0;
+}
+
+.blog main .comment-form textarea {
+  width: 100%;
+  border: 1px solid #4ceea7;
+}
+
+.blog main .comment-form a {
+  width: 100%;
+}
+
+.blog main .comment-form button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.contact header {
+  background-image: url("/Assets/contact-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 60vh;
+}
+
+.contact header .h2-flex {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: calc(40vw + 2rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.contact header h2 {
+  -webkit-transform: translateY(-5.75rem);
+          transform: translateY(-5.75rem);
+}
+
+.contact main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact main .social {
+  margin-top: 10vh;
+  width: 30%;
+}
+
+.contact main .social .icons {
+  font-size: 1.25rem;
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.contact main .social h4 {
+  margin: 2rem 0;
+}
+
+.contact main .yellow {
+  width: 60%;
+  position: relative;
+  top: -15vh;
+}
+
+.contact main form {
+  padding: 2rem;
+  position: relative;
+  bottom: 2rem;
+  right: -2rem;
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.contact main form input,
+.contact main form textarea {
+  padding: 1rem;
+}
+
+.contact main form .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact main form input {
+  border: none;
+  border-bottom: 1px solid #4ceea7;
+  width: 45%;
+  margin: 1rem 0;
+}
+
+.contact main form textarea {
+  width: 100%;
+  border: 1px solid #4ceea7;
+}
+
+.contact main form a {
+  width: 100%;
+}
+
+.contact main form button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
 body {
-  color: #2c2c2c;
+  color: var(--black);
   background: #effdf3;
 }
 

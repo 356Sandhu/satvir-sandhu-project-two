@@ -2,6 +2,7 @@
 @import "variables";
 @import "home";
 @import "blog";
+@import "contact";
 
 //  Canary      #FDFA69
 //  Sea Green   #4CEEA7
@@ -10,7 +11,7 @@
 //  Ice         #EFFDF3
 
 body {
-  color: #2c2c2c;
+  color: var(--black);
   background: #effdf3;
 }
 

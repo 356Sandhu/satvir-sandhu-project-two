@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Document</title>
+    <title>Blog | Captured</title>
   </head>
   <body class="blog">
     <header>
@@ -22,7 +22,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/blog.html" class="current">About</a></li>
             <li><a href="/blog.html">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -106,11 +106,53 @@
           </p>
         </article>
         <div class="comments">
-          <div class="article">
+          <h4>Comments:</h4>
+          <article class="comment">
             <div class="image-container">
               <img src="./Assets/comment-1.jpg" alt="" />
             </div>
-          </div>
+            <div class="text-comment">
+              <p class="date">Tuesday October 9th, 2018 by Jeremy</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam illo consequuntur voluptatibus, alias cumque cum quam
+                dignissimos ad totam natus nisi facilis aliquam molestiae
+                similique quisquam nobis et, libero odio delectus possimus.
+                Voluptatibus, repudiandae nemo.
+              </p>
+            </div>
+          </article>
+          <article class="comment">
+            <div class="image-container">
+              <img src="./Assets/comment-2.jpg" alt="" />
+            </div>
+            <div class="text-comment">
+              <p class="date">Wednesday October 10th, 2018 by Julia</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur beatae laborum quaerat minima asperiores, libero
+                adipisci, eligendi ad tempora atque molestias. Alias explicabo
+                consectetur asperiores.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="comment-form">
+          <form>
+            <div class="info">
+              <label for="name" class="sr-only">Name</label>
+              <input type="text" name="name" placeholder="Name" />
+              <label for="email" class="sr-only">Email</label>
+              <input type="email" name="email" placeholder="Email address" />
+            </div>
+            <textarea
+              name="textarea"
+              cols="30"
+              rows="10"
+              placeholder="Comment"
+            ></textarea>
+            <a href="#"><button>Post Comment</button></a>
+          </form>
         </div>
       </div>
     </main>

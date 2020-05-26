@@ -1,0 +1,93 @@
+.contact header {
+  background-image: url("/Assets/contact-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 60vh;
+
+  .h2-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    // justify-content: center;
+    margin-left: calc(40vw + 2rem);
+    align-items: center;
+    position: relative;
+  }
+
+  h2 {
+    transform: translateY(-5.75rem);
+  }
+}
+
+.contact main {
+  .wrapper {
+    display: flex;
+
+    justify-content: space-between;
+  }
+  .social {
+    margin-top: 10vh;
+    width: 30%;
+
+    .icons {
+      font-size: 1.25rem;
+      width: 35%;
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+    }
+
+    h4 {
+      margin: 2rem 0;
+    }
+  }
+
+  .yellow {
+    width: 60%;
+    position: relative;
+    top: -15vh;
+  }
+
+  form {
+    padding: 2rem;
+    position: relative;
+    bottom: 2rem;
+    right: -2rem;
+    width: 100%;
+    background-color: $white;
+
+    input,
+    textarea {
+      padding: 1rem;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid $sea-green;
+      width: 45%;
+      margin: 1rem 0;
+    }
+
+    textarea {
+      width: 100%;
+      border: 1px solid $sea-green;
+    }
+
+    a {
+      width: 100%;
+    }
+
+    button {
+      margin-top: 2rem;
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+}

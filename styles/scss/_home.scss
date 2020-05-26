@@ -209,9 +209,14 @@
     }
 
     .image-container {
+      width: auto;
       position: relative;
       right: 2.5rem;
       bottom: 2.5rem;
+    }
+
+    img {
+      width: auto;
     }
 
     .text {
@@ -233,6 +238,10 @@
       display: flex;
       justify-content: space-between;
     }
+  }
+
+  .image-container {
+    max-width: 400px;
   }
 }
 
